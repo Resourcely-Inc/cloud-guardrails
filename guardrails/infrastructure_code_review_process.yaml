@@ -1,0 +1,21 @@
+authors: Adam Cotenoff
+name: Infrastructure code must pass security linting checks to merge PRS to convergence branches
+categories: Architecture, Change Management
+functions: Security, Reliability
+resources: all
+maturity: Medium
+csps: AWS
+applies: To all IaC
+summary:  Requiring infrastructure code to pass security linting checks before merging pull requests (PRs) to convergence branches is a critical security measure that can help prevent security issues from being introduced into the production environment. 
+description: >
+  Requiring infrastructure code to pass security linting checks before merging pull requests (PRs) to convergence branches is a critical 
+  security measure that can help prevent security issues from being introduced into the production environment. 
+  This enables the detection and prevention of security misconfigurations at build time to prevent vulnerable/misconfigured infrastructure 
+  from ever being deployed. Insecure changes will be prevented before any infrastructure is actually spun up and real-time, 
+  actionable feedback can be provided to the user. By catching security issues early, the risk of security incidents is greatly reduced. 
+  
+
+
+links:
+  - https://blog.christophetd.fr/shifting-cloud-security-left-scanning-infrastructure-as-code-for-security-issues/
+  

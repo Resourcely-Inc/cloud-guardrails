@@ -1,0 +1,16 @@
+authors: Nick Siow
+name: Minimize golden OS / base container images
+categories: Architecture
+functions: Security, Reliability, Standards
+resources: EC2 / ECS / EKS
+maturity: Medium
+csps: AWS
+applies: All compute images
+summary: |
+  - Supporting and standardizing base images becomes exceedingly more difficult as the number grows
+  - Be opinionated about the set of base images and hold a high bar for introducing new distros and variations
+description: |
+  Balancing freedom vs security is important when it comes to a curated and maintainable set of base images. It is likely that a single base image or OS distro will not fulfill the needs of an entire company, but care should be taken in the extent to which this set grows.
+
+  Establishing a plan for current and future support will help to avoid reactive changes to this set in the future, as well as establishing expectations with engineers about the high bar for introducing any new base image types.
+links:

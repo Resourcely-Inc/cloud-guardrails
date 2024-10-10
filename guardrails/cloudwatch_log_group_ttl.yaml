@@ -1,0 +1,16 @@
+authors: Will Bengtson
+name: CloudWatch Log Group TTL
+categories: Configuration
+functions: Cost Management
+resources: CloudWatch
+maturity: Medium
+csps: AWS
+applies: All scaled usage of CloudWatch
+summary: Require TTL on CloudWatch logs
+description: |
+  Log groups are always created without a TTL.
+  They build up over time and while storage of them is not costly, there isn't an easy way to purge data if you were to be logging something sensitive.
+  Aging it off will keep your account hygiene good.
+
+  Require TTL on CloudWatch logs to limit bill and age potential sensitive logs away
+links:

@@ -1,0 +1,16 @@
+authors: Will Bengtson
+name: EBS Volume Encryption at Account Level
+categories: Configuration
+functions: Compliance
+resources: EBS
+maturity: Low
+csps: AWS
+applies: Compliance driven
+summary: Enforce volume encryption at the account level by default.
+description: |
+  Encrypt EBS Volumes by default
+
+  This is really for compliance initiatives. If you are doing SOC2 then you have to do this.
+  It's a check the box and really doesn't by you much outside of an encrypted volume can't be shared outside of the AWS account without permission on the KMS key.
+  Most users use the default KMS key so this prevents unauthorized exfil of data.
+links:

@@ -1,0 +1,23 @@
+authors: Mark Andersen
+name: Avoid relying on control plane AWS calls during an application/AWS issue
+categories: Process
+functions: Reliability
+resources: DNS, EC2
+maturity: High
+csps: AWS
+applies: Application Availability
+summary: Control planes prioritize consistency over availability when issues occur. Setup Route53 so failover is already setup using heath checks.
+
+description: |
+  Control planes prioritize consistency over availability when issues occur.  
+  Also, if there is a partial service outage, think of how AWS customers are going to try to fix their apps through automation or humans.  
+  AWS has a HUGE customer base. When issues happen the AWS control plane API calls will most likely rate limit and throttle very quickly.
+  Dataplanes prioritize availability and are setup for this.
+  But Route53 DNS control planes changes can rate limit.  
+  Setup Route53 so the failover is already setup using health checks (which is the dataplane).  
+
+
+links:
+- https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/best-practices-dns.html
+- https://aws.amazon.com/blogs/networking-and-content-delivery/creating-disaster-recovery-mechanisms-using-amazon-route-53/
+  

@@ -1,0 +1,20 @@
+authors: Nick Siow
+name: Broad Permission Guardrails
+categories: Change Management
+functions: Security, Reliability
+resources: IAM Policies
+maturity: Medium
+csps: AWS
+applies: Some entities (such as AWS admins) are going to need this by default
+summary: |
+  - Usage of "*:*" permissions, "AdministratorAccess", and various "FullAccess" policies confer permissions that are likely overscoped.
+  - While it's difficult to enumerate all of these, the most likely ones are a finite and auditable number.
+description: |
+  For many organizations, true least privilege within AWS is either unattainable or undesirable (within reason). However, there are many milestones between least privilege and unchecked AWS access.
+
+  For both customer and AWS managed IAM policies, broad use of "*:*", AdministratorAccess, and various FullAccess (ex: IAMFullAccess) policies should be a rare enough occurrence that they are subject to additional friction or review. These types of permissions are extremely difficult to reclaim once given out and are best addressed upfront.
+
+  Adding additional checks/processes/detections in-line with these permission updates can help to identify not just accidental misconfiguration, but also common privilege escalation paths in post-compromise scenarios.
+
+  In the event that these checks are overly noisy or difficult to operationalize, it may be an indication that excessive permissions are being given out.
+links:

@@ -1,0 +1,12 @@
+authors: Travis McPeak
+name: Uniform bucket-level access
+categories: Configuration
+functions: Security
+resources: S3
+maturity: Low
+csps: AWS
+applies: Always
+summary: Individual object permissions can create surprising ACL issues and should be avoided in favor of explicit policies on buckets.
+description: |
+  Individual object permissions can create surprising ACL issues and should be avoided in favor of explicit policies on buckets.
+links:

@@ -1,0 +1,40 @@
+authors: Adam Cotenoff
+name: External-facing services must implement protections against DoS - use a WAF
+categories: Architecture
+functions: Security, Reliability
+resources: Compute
+maturity: High
+csps: AWS
+applies: Always
+summary: External-facing services should implement protections against DoS through a WAF, to ensure availability of your service(s)
+description: >
+  External-facing services should implement protections against Denial-of-Service (DoS) attacks. 
+  By implementing protections against DoS attacks, you can help to ensure the availability of your service(s) to legitimate users. 
+  This can help prevent downtime and ensure that your users can continue to access your service.
+  
+  Auto-Scaling of compute/containers is a general recommendation to protect against DoS attacks. 
+  This refers to the ability to automatically add or remove compute resources based on the current demand for resources. 
+  For example, if a particular compute instance is targeted by a (D)DoS attack, autoscaling can automatically spin up additional 
+  compute to share the traffic load and mitigate the impact of the attack, maintaining service availability.
+  
+  Some forms of (D)DoS mitigation are included out-of-the-box with specific cloud provider services, 
+  but additional resiliency can be added by using an architecture with specific services.
+  
+  A non-comprehensive overview of cloud service provider services that can be used to implement (D)Dos protection are as follows:
+    - AWS Shield and Google Cloud Armor:
+      - Both AWS Shield and GCP Cloud Armor are managed services that can help defend against DDoS attacks.
+    - Amazon CloudFront and Google Cloud CDN: 
+      - These products are content delivery network (CDN) services that can be used to protect web applications from DDoS attacks. 
+      - It can help mitigate attacks by caching content and distributing it across multiple edge locations, reducing the load on the origin servers.
+    - AWS WAF and Google Cloud Armor WAF: 
+      - AWS WAF (Web Application Firewall) and Google Cloud Armor provide a web application firewall that can be used to protect web applications from common web exploits and DDoS attacks. 
+      - They provide a configurable set of rules to allow, block, or monitor certain requests.
+      - As for internal services, fluctuations in traffic and volume can also impact service availability and performance. 
+      Implementing resiliency measures can help ensure that internal services continue to function properly, even during periods of high traffic or unexpected spikes. 
+  
+  
+links:
+- https://docs.aws.amazon.com/whitepapers/latest/aws-best-practices-ddos-resiliency/mitigation-techniques.html
+- https://www.reblaze.com/blog/gcp-security/how-to-setup-and-use-google-cloud-armor/
+- https://docs.aws.amazon.com/whitepapers/latest/aws-best-practices-ddos-resiliency/best-practices-for-ddos-mitigation.html
+  

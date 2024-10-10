@@ -1,0 +1,23 @@
+authors: Houston Hopkins
+name: AWS presigned URL vigilance
+categories: Configuration, Change Management
+functions: Security
+resources: All AWS Resources
+maturity: Medium
+csps: AWS
+applies: Unless there are active measures taken in AWS SCP, Resource policies, or IAM policies
+summary: Prevent presigned URLs for all of your resources, not just S3
+description: |
+  Commonly when we talk about PresignedURLs we all immediately think of Amazon S3 as it is well documented and widely used with presigned URLs.
+  In fact most, if not all AWS API calls can be presigned. Create/Delete calls for EC2, VPC, RDS, Lambda.
+  This is important because presigned URL usage is only currently "easily" detectable in S3 Cloudtrail Datavents, which many/most do not have enabled.
+  In standard cloudtrail, the AuthenticationMethod (which is Query String for presigned URLs) is not present.
+  To prevent presigned URL usage in S3 you can add a statement to a bucket policy.
+  Preventing presigned URL usage for other resources is not documented or well understood.
+  One recommendation is to use Data Perimeter concepts and guardrail the IAM Role/IAM user that creates the presigned url with SourceVPC,
+  SourceIP information to make sure the URL is only available from your expected Networks.
+  Presigned URLS are used throughout the AWS Console and are gobbled up by Chrome Extensions, Browser Plugins, AV products, etc.
+  This is an important guardrail that is almost always overlooked.
+links:
+  - https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html
+  - https://github.com/aws-samples/data-perimeter-policy-examples/blob/main/service_control_policies/network_perimeter_ec2_policy.json

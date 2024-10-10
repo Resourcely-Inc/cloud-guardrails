@@ -1,0 +1,16 @@
+authors: Houston Hopkins
+name: Databackup account
+categories: Architecture
+functions: Reliability
+resources: S3
+maturity: Medium
+csps: AWS
+applies: Applies if you have data that has to persist for business operation, regulatory or legal reasons.
+summary: Create a Cold account for copying in data that can't be deleted.
+description: |
+  You need a way to have backups in an account different from yours in case someone takes over your account (ex. the codespaces event).
+  You can create a Cold account that you copy data into but can't delete it.
+  Use a retention policy to expire it.
+  AWS Backup might be another way for data prevention too.
+links:
+  - https://aws.amazon.com/blogs/storage/managing-access-to-backups-using-service-control-policies-with-aws-backup/

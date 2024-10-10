@@ -1,0 +1,15 @@
+authors: Travis McPeak
+name: Public access block
+categories: Configuration
+functions: Security
+resources: S3, GCS
+maturity: Low
+csps: AWS, GCP
+applies: Always applies
+summary: Prevent public bucket exposure by enabling public access block.
+description: |
+  Public access block should be enabled to prevent accidental public bucket exposure.
+  Disabling it should require an informed stakeholder approval.
+links:
+  - https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-control-block-public-access.html
+  - https://cloud.google.com/storage/docs/public-access-prevention

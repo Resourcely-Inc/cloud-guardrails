@@ -1,0 +1,15 @@
+authors: Will Bengtson
+name: Instances must be launched in Autoscaling Group
+categories: Configuration, Change Management
+functions: Reliability
+resources: EC2
+maturity: High
+csps: AWS
+applies: For relaible EC2 in AWS
+summary: Require autoscaling groups for resilient deployments in case your EC2 instances fail.
+description: |
+  This is a best practice for reliability of deployments in AWS.
+  EC2 instances can sometimes just disappear and ASGs ensure you always have at least 1 server running and serving your customers.
+
+  Require ASGs for resilient deployments when AWS decides to kill your EC2.
+links:

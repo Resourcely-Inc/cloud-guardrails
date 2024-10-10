@@ -1,0 +1,28 @@
+authors: Nick Siow
+name: Customized Base Images
+categories: Architecture, Change Management
+functions: Security, Reliability, Standards
+resources: EC2
+maturity: Medium
+csps: AWS
+applies: |
+  This doesn't apply when vendor-supplied or Marketplace AMIs must be used, as those will be created with a lineage out of your control
+summary: |
+    - When possible, all AMIs in your organization should be based off a blessed base image
+    - This base image is an excellent target for proliferating secure defaults and best practices
+description: |
+  Whether using golden images or configuring your compute at runtime, every EC2 image has a "lineage" of sorts, which represent the one or more images that were used during the image baking process to create this image.
+
+  To fulfill this best practice, some entity must own the responsibility of creating a set of base images (1+) for the company. From there, every EC2 AMI in use should have that base image at some point in its lineage.
+
+  This set of approved base images becomes a centralized place for best practices, including but not limited to:
+    - Removing unwanted services or binaries
+    - Enabling host-level security features and/or monitoring
+    - Standardizing versions for various software
+    - Adding capabilities for breakglass/emergency access
+    - ... and more!
+
+  While these base customizations can be overridden in subsequent bakes, it requires explicit intent to opt out of these best practices and nonetheless serves as a high leverage mechanism for infrastructure standardization.
+
+  NOTE: Having the base image as a direct parent is not strictly necessary, as some teams or organizations may want to create intermediate images. This can be supported without losing any of the benefits for base images in general.
+links:

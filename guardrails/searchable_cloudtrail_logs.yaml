@@ -1,0 +1,13 @@
+authors: Travis McPeak
+name: Retain X>90 days of cloudtrail logs in a searchable tool
+categories: Architecture
+functions: Security, Reliability
+resources: Cloudtrail
+maturity: Medium
+csps: AWS
+applies: Always applies
+summary: Enable cloudtrail logs for more than 90 days to facilitate investigating changes to resources.
+description: |
+  At some point, an organization will want to answer who / what changed that resource, deleted that resource, etc.
+  You'll want CloudTrail in a search tool (ELK, SumoLogic, Splunk, etc.) to quickly find out what happened.
+links:

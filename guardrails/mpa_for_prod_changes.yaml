@@ -1,0 +1,39 @@
+authors: Adam Cotenoff
+name: Multi-party approval (MPA) and multi-factor authentication (MFA) should be required for all changes to production
+categories: Change management
+functions: Security
+resources: all
+maturity: Medium
+csps: AWS
+applies: Applies when a robust IaC CI/CD workflow is in place
+summary: Limiting engineers' access to production environments by managing infrastructure through Infrastructure as Code (IaC), enforcing identity-based changes, multi-party approval, MFA, and security linting helps ensure accountability, consistency, and reduces security risks.
+description: >
+  There should be very few cases where engineers have unrestricted access to the production control plane for their infrastructure. 
+  There are many operational benefits to using Infrastructure as Code (IaC), including, but not limited to, repeatability, 
+  disaster recovery, the ability to perform automated tests, etc.. 
+  
+  IaC reduces the risk of human error, ensures all changes are reviewed, and provides a change ledger that can be used for attestation of changes. 
+  Additionally, it allows for a centralized, scalable, and standardized place to bootstrap safe defaults, guardrails, and detections. 
+  As such, minimal console and API access is needed for production environments and should be locked down accordingly. 
+  All production infrastructure should be managed by IaC and checked into source.
+  
+  Requiring production changes to be performed by the identity tied to the IaC build is a best practice to ensure accountability and reduce the risk of unauthorized changes. 
+  By limiting write access to production environments to the identity tied to the IaC build, the principle of least privilege is enforced. 
+  This allows us to remove unnecessary, elevated permissions to end users. 
+  Additionally, consistency is enforced across the infrastructure, helping prevent configuration drift and other issues that can arise when human changes are made in the console or API.
+  
+  To prevent unilateral changes to this production code, multi-party approval (MPA) and multi-factor authorization (MFA) should be required. 
+  For example, a peer review is required to merge human-authored pull requests (PRs) to convergence branches. 
+  Review approval and code commit should require MFA. This mitigates the risk of unintentional or intentionally malicious modification to production services and/or data.
+  
+  Requiring infrastructure code to pass security linting checks before merging pull requests (PRs) to convergence branches is a critical security measure that can help prevent 
+  security issues from being introduced into the production environment. 
+  This enables the detection and prevention of security misconfigurations at build time to prevent vulnerable/misconfigured infrastructure from ever being deployed. 
+  Insecure changes will be prevented before any infrastructure is actually spun up and real-time, actionable feedback can be provided to the user. 
+  By catching security issues early, the risk of security incidents is greatly reduced. 
+  
+
+
+links:
+
+  

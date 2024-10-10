@@ -1,0 +1,24 @@
+authors: Adam Cotenoff
+name: Limit public IP addresses, centralize network access through ingress proxies
+categories: Architecture, Change Management
+functions: Security
+resources: VPC
+maturity: Medium
+csps: AWS
+applies: Always
+summary: The use of public IP address by services running in the cloud should be restricted.
+description: | 
+  Traffic from the public internet to services running on the cloud should be centralized through ingress proxies. 
+  
+  By centralizing inbound network access, you gain greater control and manageability over your network. 
+  You can enforce security policies and access controls in a single location, which can simplify network management and reduce the risk of misconfigurations.
+  This reduces the attack surface to external actors whose only access is to cloud resources through public endpoints. 
+  A proxy can also provide us with centralized visibility into all inbound traffic. 
+  
+  There are additional performance and scalability benefits to a centralized ingress proxy. 
+  Caching frequently accessed content and distributing traffic across multiple backend servers/services can help ensure that services are highly available and responsive, even under heavy load.
+
+
+links:
+  - https://cloud.google.com/kubernetes-engine/docs/concepts/ingress
+  

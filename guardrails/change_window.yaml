@@ -1,0 +1,13 @@
+authors: Travis McPeak
+name: Change window
+categories: Change Management
+functions: Reliability
+resources: Many
+maturity: Low
+csps: AWS, GCP, Azure
+applies: Always
+summary: Avoid time windows that are potentially sensitive (night/weekend/holidays) for making changes to critical resources.
+description: |
+  Consider when colleagues will be around to respond to outages. Avoid changes to critical resources when they won't be.
+  Many companies avoid changes around nights/weekends/holidays, but the specific times depend on the nature of the business.
+links:

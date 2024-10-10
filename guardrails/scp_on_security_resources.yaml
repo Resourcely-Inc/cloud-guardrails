@@ -1,0 +1,22 @@
+authors: Nick Siow
+name: SCP on Security Resources
+categories: Configuration
+functions: Security
+resources: CloudTrail, Config, key S3 buckets, GuardDuty, SecurityHub, etc
+maturity: Low
+csps: AWS
+applies:
+summary: |
+  - Per account resources involved in security functions should be protected by SCP
+  - Special attention for "disruptive" calls -- updates, deletes, disables, etc
+  - Most principals do not need this access
+description: |
+  Access to AWS API calls involving security & governance services in an organization should be consolidated to a handful of user and automation principals.
+
+  This allows a security team to write effective SCPs to prevent most principals from calling these APIs. It also assists in limiting the effects of privilege escalation within an account, by making it significantly more difficult to disable security services or tooling even with admin-esque access.
+
+  The important API calls vary service-to-service, but generally consist of both deletion actions (deleting CloudTrail Trails, Config Recorders, etc) as well as updates (modifying GuardDuty detectors/lists, suppressing finding types, etc)
+
+  Exemptions to these SCPs can be accomplished via tag- or ARN-based conditions on the SCP (e.g. StringNotLike/aws:PrincipalArn)
+links:
+  - https://www.wiz.io/blog/using-service-control-policies-to-protect-security-baselines

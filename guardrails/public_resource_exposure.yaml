@@ -1,0 +1,24 @@
+authors: Nick Siow
+name: Approval for public resource exposure
+categories: Change Management
+functions: Security
+resources: Resources that allow public access, especially cloud data stores such as S3, SQS, RDS, etc
+maturity: Medium
+csps: AWS
+applies: |
+  Resources that are meant to be public, such as S3 buckets containing non-proprietary web assets or public datasets.
+summary: Any exposure of a resource to truly public (aka not restricted by Condition) users should require additional approval
+description: |
+  The notion of "public" within AWS is not a straightforward issue to navigate. For example, infrastructure can be public from a network perspective (L4) and reachable from the public internet, but have compensating controls which make this a non-issue.
+
+  For the purposes of this guardrail, we'll consider "public" to mean any of:
+  - Accessible through the AWS APIs (e.g. S3)
+  - Accessible directly over the public internet (e.g. RDS)
+  - Including both anonymous (does not require an AWS identity or authorization) and non-anonymous (must be performed by a valid AWS Principal)
+
+  In all of these and adjacent cases, it's unlikely that true public access is the intended and desired access configuration for the resource. There are many ways to keep broad access while still scoping access to the company owning the resource.
+
+  For example, using AWS VPN solutions to access resources within private/internal VPCs or using "aws:PrincipalOrgId" conditions to provide access to any IAM entities within your organization.
+
+  Security teams should remain reactive to publicly-exposed resources and try to either prevent them where possible or address them soon after creation, before they begin to hold/transfer data and before the access pattern is more difficult to unwind. These resources should then be moved onto an approved path or carefully segmented and inventoried based on the risk exposure they now introduce.
+links:

@@ -1,0 +1,17 @@
+authors: Mark Andersen
+name: Account Segmentation
+categories: Architecture
+functions: Standards
+resources: AWS Account
+maturity: Low
+csps: AWS
+applies: When designing your account structure and connectivity for all your cloud applications.
+sumamry: Have at least DEV, QA, PROD accounts.
+
+description: |
+  Have at least DEV, QA, PROD accounts. Recommend not having just non-prod and prod, otherwise you will be forced to parameterized your resources / 
+  deployments before you go to prod.
+
+links:
+  - https://docs.aws.amazon.com/whitepapers/latest/organizing-your-aws-environment/benefits-of-using-multiple-aws-accounts.html
+  - https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/aws-account-management-and-separation.html

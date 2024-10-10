@@ -1,0 +1,14 @@
+authors: Will Bengtson
+name: RDS Databases Encrypted
+categories: Configuration
+functions: Compliance
+resources: RDS
+maturity: Low
+csps: AWS
+applies: |
+  This is purely a compliance check the box.
+  RDS isn't ever in a resting state so the data is always unencrypted while in use.
+summary: Encrypt RDS databases at rest.
+description: |
+  Require encryption at rest on RDS.
+links:

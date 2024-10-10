@@ -1,0 +1,12 @@
+authors: Travis McPeak
+name: Centralize cloudtrail logging
+categories: Architecture
+functions: Security, Standards
+resources: Cloudtrail
+maturity: Medium
+csps: AWS
+applies: Always
+summary: Configure CloudTrail to log to a bucket in a central account with specific prefixes based on the application or role sending them.
+description: |
+  Configure CloudTrail to log to a bucket in a central account with specific prefixes based on the application or role sending them.
+links:

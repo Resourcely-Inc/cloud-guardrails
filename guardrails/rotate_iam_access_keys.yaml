@@ -1,0 +1,24 @@
+authors: Adam Cotenoff
+name: Rotate IAM access keys
+categories: Process
+functions: Security
+resources: IAM Users
+maturity: 
+csps: AWS
+applies: To IAM users
+summary: Rotate IAM access keys where IAM users are still required
+description: >
+  In the situations where IAM users are still required, or for existing IAM users 
+  that haven not/can not be migrated to IAM roles, access keys should be rotated where applicable. 
+  
+  The frequency of key rotation may vary depending on your specific security requirements and the 
+  level of risk associated with your application or infrastructure, but general guidance is to rotate
+  when existing keys are 90 days old. 
+  
+  Regularly rotating access keys is important in maintaining the security of your infrastructure. 
+  This practice limits the amount of time that an exposed key is valid for.
+
+
+links:
+
+  

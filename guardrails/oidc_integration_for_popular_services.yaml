@@ -1,0 +1,12 @@
+authors: Will Bengtson
+name: OIDC Integration for popular services
+categories: Configuration
+functions: Identity, Security
+resources: IAM
+maturity: Medium
+csps: AWS
+applies: Always
+summary: Avoid using IAM users for popular services by creating a pattern to enable OIDC integrations.
+description: |
+  Create pattern to enable OIDC integrations for popular services to promote not using IAM Users: GitHub Actions, Terraform Cloud, etc
+links:

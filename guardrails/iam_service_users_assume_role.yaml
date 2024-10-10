@@ -1,0 +1,22 @@
+authors: Adam Cotenoff
+name: IAM Service Users can only assume into a role which has actual permissions
+categories: Architecture
+functions: Security
+resources: IAM
+maturity: Medium
+csps: AWS
+applies: Always
+summary: Creating IAM roles that have the necessary permissions, and then assigning those roles to the IAM users who require access to the resources allows you to centralize the management of permissions. 
+description: >
+  When you create an IAM user, permissions can be granted to the user directly by attaching policies that specify what the user can and cannot do. 
+  It is recommended to avoid assigning permissions directly to IAM users. Instead, you should create IAM roles to delegate permissions to an IAM user. 
+  When you assign permissions directly to an IAM user, it can become difficult to manage permissions as the number of users grows. 
+  Creating IAM roles that have the necessary permissions, and then assigning those roles to the IAM users who require access to the resources allows 
+  you to centralize the management of permissions. 
+  
+  This allows you to modify the permissions associated with a role without having to modify the permissions for each individual user.
+
+
+links:
+- https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html
+  

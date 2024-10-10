@@ -1,0 +1,17 @@
+authors: Mark Andersen
+name: Test your backups by restoring them
+categories: Process
+functions: Reliability
+resources: S3, DynamoDB, RDS
+maturity: Low
+csps: AWS
+applies: Always
+summary: Ensure your backups work by testing them on an interval.
+description: |
+  Test restoring from backup on an interval and automate it. 
+  You don't want to find out your backups don't work when you need it most.
+
+
+links:
+- https://docs.aws.amazon.com/prescriptive-guidance/latest/security-best-practices/test.html
+  

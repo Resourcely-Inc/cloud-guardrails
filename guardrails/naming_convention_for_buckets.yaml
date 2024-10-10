@@ -1,0 +1,16 @@
+authors: Travis McPeak
+name: Naming convention for buckets
+categories: Configuration
+functions: Standards
+resources: S3, GCS
+maturity: Low
+csps: AWS, GCP
+applies: Always
+summary: Enforce naming conventions for storage buckets with a unique prefix to avoid collisions.
+description: |
+  Buckets are globally namespaced, so you should include a unique prefix (possibly your company name) to make collisions unlikely.
+  Other good practices to add in bucket names:
+   - the region buckets exist in
+   - the application they are associated with
+   - "public" for deliberately public buckets
+links:

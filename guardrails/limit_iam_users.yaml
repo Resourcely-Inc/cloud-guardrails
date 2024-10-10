@@ -1,0 +1,34 @@
+authors: Adam Cotenoff
+name: Limit IAM users
+categories: Change Management
+functions: Security
+resources: IAM Users
+maturity: Medium
+csps: AWS
+applies: Always
+summary: Limit the creation of new IAM users, and prefer using IAM roles when possible.
+description: | 
+  IAM users have long-term credentials, such as a password or access keys, that can be used to access AWS resources. 
+  Creating IAM Users directly can lead to a proliferation of long lived credentials, making it difficult to manage and audit access to resources. 
+  Long lived credentials often leak into logs, are hard to rotate and have led to many significant cloud breaches.
+  
+  Generally, unscoped, long-term credentials should not be used for authentication. 
+  IAM roles and AssumeRole can help mitigate this risk by providing temporary security credentials that can be used to grant time-bound access 
+  to AWS resources. These credentials will have a limited lifespan and reduce the risk of credential leakage.
+  
+  There are certain situations where 3rd party tools/services may require exported access keys from an IAM user. 
+  If, and only, if a 3rd party does not support identity providers (IdP) and federated access, IAM users with exported access keys can be used.  
+  However, these IAM users should be tagged to know where the access key is being used from. 
+  Tagging IAM users with the resources and services they will be used for helps to provide visibility and control over who has access to what. 
+  This practice also helps to prevent accidental access to resources and services that should not be accessed.
+  
+  If you need IAM users, multi-factor authentication (MFA) for console and API access should be required. 
+  With MFA enabled, users are required to enter a unique authentication code in addition to their password to access the console or CLI, 
+  adding an additional layer of security to the authentication process. 
+  MFA ensures that users are who they say they are and reduces the risk of account takeover in the event that a users password is compromised.
+
+links:
+- https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRoleWithWebIdentity.html
+- https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services
+- https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html
+  

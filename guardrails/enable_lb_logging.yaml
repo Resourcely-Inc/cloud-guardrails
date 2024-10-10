@@ -1,0 +1,20 @@
+authors: Mark Andersen
+name: Enable ELB / ALB / NLB logging
+categories: Configuration
+functions: Security
+resources: ELB / ALB / NLB
+maturity: Medium
+csps: AWS
+applies: When using ELB / ALB / NLB
+summary: Enable access logs for all load balancers.
+description: >
+  Turn on the access logs to your load balancers. 
+  You'll want to suck them into a search tool AND, 
+  you won't get much help from AWS Support if you 
+  open a ticket on your load balancer and you don't have them turned on.
+
+
+links:
+- https://docs.aws.amazon.com/elasticloadbalancing/latest/application/enable-access-logging.html
+- https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-access-logs.html
+  

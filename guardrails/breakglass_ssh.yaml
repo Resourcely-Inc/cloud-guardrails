@@ -1,0 +1,24 @@
+authors: Nick Siow
+name: Breakglass SS{M,H}
+categories: Architecture
+functions: Security
+resources: EC2
+maturity: High
+csps: AWS
+applies:
+summary: For incident response and archaeology, all instances should have some sort of breakglass mechanism for direct access. A protected role with SSM access and/or tagging requirements on the instance can facilitate this.
+description: |
+  During the course of an incident or security investigation, it's not uncommon for the security team to need direct SSH access to EC2 instances. This can be difficult in scenarios where the service/application owners exclusively control SSH, or in instances where an EC2 instance was abandoned and the owners are no longer accurate/with the company.
+
+  As a contingency plan, security teams should have a way to access management interfaces on the host.
+
+  It's worth noting that this access is best set up to be truly breakglass
+    - security engineers/analysts should have some type of escalation process in order to get this access,
+    - and usage should be audited closely to make sure it is not being used as a widespread abuse mechanism.
+
+  A couple of ways to accomplish this are:
+  - Embedding breakglass SSH keys into AMIs at bake time, and protecting the corresponding private keys closely
+  - Enforcing use of AWS SSM, and being careful with the permissions such as RunCommand or StartSession
+
+  This type of control pairs well with Base/Golden image approaches, as it offers an early point in the AMI lifecycle into which this can be introduced.
+links:

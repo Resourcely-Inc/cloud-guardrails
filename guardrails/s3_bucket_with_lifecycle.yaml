@@ -1,0 +1,16 @@
+authors: Will Bengtson
+name: S3 bucket with lifecycle
+categories: Configuration
+functions: Cost Management
+resources: S3
+maturity: Medium
+csps: AWS
+applies: Always
+summary: Require lifecycle policy on S3 buckets for things like logs (1 yr deletion recommended)
+description: |
+  Compliance initiatives almost always want logs for 1 year.
+  Keeping logs longer than that can be a legal liability should something happen at your company.
+  If you have the logs you will be required to look at them, should you need to investigate.
+  This also helps with cost of storing your data in S3.
+  If you don't lifecycle the logs out, consider moving them to a different class of storage like glacier to cut cost.
+links:

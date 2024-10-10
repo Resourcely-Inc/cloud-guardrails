@@ -1,0 +1,13 @@
+authors: Travis McPeak
+name: Approval for reconfiguration of sensitive resources
+categories: Change Management
+functions: Security, Reliability
+resources: Many
+maturity: Low
+csps: AWS, GCP, Azure
+applies: Always
+summary: Examine configuration changes for all resources with production impact.
+description: |
+  In cases where a resource has production impact, you should have a reviewer examine all configuration changes before making them.
+  This helps reduce the likelihood of outages, breaches, and other bad outcomes.
+links:

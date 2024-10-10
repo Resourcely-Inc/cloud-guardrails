@@ -1,0 +1,15 @@
+authors: Houston Hopkins
+name: Deploy all resources in multiple AZ's (including the Load Balancers)
+categories: Architecture
+functions: Reliability
+resources: EC2, RDS, *LB
+maturity: Medium
+csps: AWS
+applies: Always
+summary: Deploy all resources to multiple availability zones to facilitative seamless failover.
+description: |
+  AZ is one of the blast radius boundaries in AWS. With services in multiple AZ's failover is seamless or relatively easy.
+
+  Watch out for az3 in us-East-1. It's commonly but not guaranteed to be us-East-1e. This AZ is not well kept
+links:
+  - https://wolfman.dev/posts/exclude-use1-az3/

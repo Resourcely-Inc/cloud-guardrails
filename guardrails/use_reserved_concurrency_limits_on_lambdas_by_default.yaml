@@ -1,0 +1,19 @@
+authors: Mark Andersen
+name: Use reserved concurrency limits on lambdas by default
+categories: Configuration
+functions: Reliability, Cost Management
+resources: Lambda
+maturity: Low
+csps: AWS
+applies: When using lambda
+summary: Lambdas suffer from the noisy neighbor problem if you don't set a reserve concurrency value
+description: |
+  If you don't set a reserved concurrency number, you use the account pool of concurrency which is shared by all lambdas in the account. 
+  If one bad / out of control lambda uses all of the account pool other lambdas in the shared concurrency pool can't run. 
+  If you set a reservation, that is reserved for that lambda and can run up to that concurrency. 
+  It also protects your lambda from being the one that runs out of control (you are capped at that limit)
+
+
+links:
+- https://aws.amazon.com/blogs/compute/managing-aws-lambda-function-concurrency/
+  

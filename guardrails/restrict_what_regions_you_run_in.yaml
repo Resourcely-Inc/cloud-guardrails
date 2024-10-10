@@ -1,0 +1,20 @@
+authors: Houston Hopkins
+name: Restrict what regions you run in
+categories: Architecture, Change Management
+functions: Reliability, Security
+resources: All
+maturity: Low
+csps: AWS
+applies: All copmanies using AWS organizations
+summary: Restrict the regions that you run in to only those you operate in, to avoid unnecessary attack surface/cost/complexity.
+description: |
+  You cannot fully avoid us-East-1.
+  However, all companies utilizing AWS organizations should consider a SCP to deny all regions except those explicitly used/necessary to avoid attack surface sprawl.
+  
+  Only allow regions you operate in. To avoid unnecessary attack surface, cost, and complexity
+  Would recommending avoiding us-west-1 because it is an old region and only has 2 AZ's.
+  Although I would not recommdend denying us-east-1 region, I would recommend avoiding it if possible.
+  us-east-1 has a lot of variation in AZs. (avoid use1-az3 aka us-east-1e)
+  It is more of a mega region. Try us-east-2 instead.
+links:
+  - https://asecure.cloud/a/scp_whitelist_region/

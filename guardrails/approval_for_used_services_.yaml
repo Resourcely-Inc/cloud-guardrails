@@ -1,0 +1,33 @@
+authors: Adam Cotenoff
+name: Approval of for used cloud services by Security/Compliance/Governance
+categories: Change Management
+functions: Security, Compliance
+resources: Cloud datastores
+maturity: Medium
+csps: AWS
+applies: Always
+summary: When handling sensitive data in the cloud, it is important to ensure that the cloud services being used meet certain security, compliance, and governance requirements.
+
+description: |
+     This requires a thorough evaluation of both the cloud service provider and the specific services being used.
+    As every company has their own risk appetite, it is up to the corresponding security/compliance/governance teams of each company to adequately assess
+    cloud services against their specific industry, regulatory requirements, and organizational policies. This should be done prior to the
+    handling/processing/storing of any sensitive data by specific cloud services.
+
+    Here are some considerations that these teams should take into account when performing this evaluation:
+      - Security controls: The cloud service provider should have comprehensive security controls in place to protect sensitive data, such as varying levels of encryption. 
+      - Security documentation should be reviewed and security assessments may need to be performed to ensure that the controls are appropriate. 
+        - Note that services within the same cloud provider, e.g. DynamoDB vs RDS in AWS, may have varying types and levels of security controls.
+      - Compliance certifications: Many industries and regions have specific compliance requirements that must be met when handling a certain level of sensitive data. 
+      - The cloud service provider should have relevant compliance certifications, including (but not limited to) PCI DSS or SOC 2, to ensure that they meet these requirements.
+      - Data location and residency: Some regulations require that data be stored and processed within specific geographic regions. 
+        - As such, cloud services should have the capability to store data in the required regions and ensure that it is not transferred to unauthorized locations.
+      - Data retention and deletion: When handling sensitive data, it is important to have clear policies for data retention and deletion. 
+      - There should be mechanisms in place to ensure that data is retained only for the necessary duration and is securely deleted when no longer needed.
+      - User access controls: Access to sensitive data should be limited to authorized users only. 
+      - The cloud service provider and specific cloud services should have comprehensive access controls in place, such as multi-factor authentication and role-based access control, to ensure that only authorized users can access the data.
+      - Ultimately, these requirements and answers vary and should be used as a starting point before allowing the handling of sensitive data within the cloud. 
+
+links:
+ 
+  

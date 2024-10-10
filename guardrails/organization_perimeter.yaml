@@ -1,0 +1,24 @@
+authors: Nick Siow
+name: Organization Perimeter
+categories: Architecture, Configuration
+functions: Security, Reliability
+resources: Resources that allow X-account access
+maturity: Medium
+csps: AWS
+applies:
+summary: |
+  - External/third party accounts should be inventoried in a central location, along with relationship/justification
+  - Expanding perimeter via policy should require expanding account inventory first
+description: |
+  While sharing AWS resources with external entities is a common industry practice, these integration points constitute areas of high potential risk and can blur the lines between partner integrations and cloud compromise scenarios.
+
+  It's a good security practice to treat your company's Organization as a perimeter, and require explicit cataloging of other AWS accounts and entities which extend that perimeter.
+
+  An audit of this perimeter can be performed in a number of ways, such as:
+  - Checking resource policies in AWS Config to view external trusted accounts
+  - Checking AWS CloudTrail for interactions with external accounts (extra useful if CloudTrail Data Events are enabled)
+  - Checking S3 access logs for incoming requests from external principals
+
+  Keeping this inventory up to date and performing continuous audits will help to keep the perimeter well-maintained over time and can be an excellent way to discover unapproved or unchecked integrations. If the volume grows over time, consider consolidating these perimeter-expansion points to a particular account or organization OU.
+links:
+  - https://matthewdf10.medium.com/aws-accounts-as-security-boundaries-97-ways-data-can-be-shared-across-accounts-b933ce9c837e

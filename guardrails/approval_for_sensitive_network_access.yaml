@@ -1,0 +1,12 @@
+authors: Travis McPeak
+name: Approval for sensitive network access
+categories: Change Management
+functions: Security
+resources: EC2
+maturity: Low
+csps: AWS, GCP, Azure
+applies: As early as possible
+summary: Require approval for adding new access to trusted/privileged resources.
+description: |
+  If your company has trusted/privileged security groups, networks, and/or ingress ports, require approval for adding new access to it them.
+links:

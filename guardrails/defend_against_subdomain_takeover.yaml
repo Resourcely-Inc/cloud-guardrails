@@ -1,0 +1,23 @@
+authors: Houston Hopkins
+name: Defend against Subdomain Takeover
+categories: Configuration
+functions: Security
+resources: Route53, Cloudfront, S3, etc
+maturity: Medium
+csps: AWS
+applies: When you point DNS records to cloud infrastructure
+summary: Tightly couple any processes that involve Route53 to their Alias resources to avoid subdomain takeover.
+
+description: |
+  Dangling DNS records (orphaned DNS records) are common across many companies in the cloud age and modern IaC often do not take into account how a Route53 record could become orphaned when it's target infrastructure is deleted.
+  The coupling is often missing and the value of order not considered. If you host DNS records even outside of route53 but point the alias or CNAME to AWS resources you should act with caution
+
+  "subdomain takeovers" in AWS are still a booming business for attackers and researchers.
+  It is highly recommended to tightly couple any processes that involve Route53  to their Alias resources.
+  Mainly to keep a strict order of operations for creation and deletion.
+  For creation: always create the Route53 record last. And for Deletion Always delete the Route53 Record first.
+  The goal is to avoid the Record being orphaned at any point in time.
+  That is the Record should never point to a resource that no longer or does not yet exist.
+  If not followed an increased liklihood of takeover exists, especially if you run a bug bounty or are a larger brand that gets constant attack attempts.
+links:
+  - https://hackingthe.cloud/aws/exploitation/orphaned_%20cloudfront_or_dns_takeover_via_s3/

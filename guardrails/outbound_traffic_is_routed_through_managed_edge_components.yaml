@@ -1,0 +1,33 @@
+authors: Adam Cotenoff
+name: Outbound traffic is routed through managed edge components
+categories: Architecture
+functions: Security
+resources: VPC
+maturity: High
+csps: AWS
+applies: |
+  This does not apply if there is no guardrail to prevent the creation of new VPCs with NAT/Internet gateways. 
+  If a user can create a new public VPC, they could theoretically bypass this egress proxy.
+
+summary: To prevent malicious or accidental exfiltration of data, all outbound traffic should be routed through managed edge components. 
+description: |
+  Outbound traffic to the public internet should be routed through an egress proxy with an explicit allowlist of public addresses. 
+  This provides improved visibility into the traffic leaving the network. 
+  An explicit allowlist of public addresses can help enforce security policies by limiting access to approved destinations and blocking
+  unauthorized access to the public internet.
+  
+  It's important to note that a VPC needs to be configured correctly to use the egress proxy, and that the creation of new VPCs with 
+  Internet or NAT Gateways can bypass this egress proxy to access the public internet directly. 
+  This is only effective if there is limited ability to create new Internet or NAT Gateways.
+  
+  Traffic to cloud provider API endpoints and partner private links should be routed through provider-controlled private endpoints exposed to the VPC. 
+  For AWS, use VPC Endpoints. For GCP, use Private Service Connect. By using these  provider-controlled private endpoints, traffic to cloud provider 
+  API endpoints/partner private links does not traverse the public internet. 
+  There may be some performance benefits as well, as private endpoints are typically closer to the destination and have higher bandwidth and lower latency.
+  
+
+
+links:
+- https://aws.amazon.com/blogs/security/how-to-set-up-an-outbound-vpc-proxy-with-domain-whitelisting-and-content-filtering/
+- https://aws.amazon.com/blogs/networking-and-content-delivery/providing-controlled-internet-access-through-centralised-proxy-servers-using-aws-fargate-and-privatelink/
+  

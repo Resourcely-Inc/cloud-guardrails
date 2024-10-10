@@ -1,0 +1,12 @@
+authors: Will Bengtson
+name: S3 bucket with replication to another account/region pair
+categories: Configuration
+functions: Reliability, security
+resources: S3
+maturity: High
+csps: AWS
+applies: When recovery is necessary
+summary: Require S3 bucket replication to another account and region
+description: |
+  Require replication to another account and region for enhanced DR
+links:

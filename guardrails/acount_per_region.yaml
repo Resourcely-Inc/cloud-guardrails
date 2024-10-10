@@ -1,0 +1,17 @@
+authors: Mark Andersen
+name: Account per region
+categories: Architecture
+functions: Standards
+resources: AWS Account
+maturity: High
+csps: AWS
+applies: When you need extremely high availability application setup
+summary: Use an account per region to avoid having a single account take down your application.
+
+description: |
+  If you want really high availability and are multi-region, consider using an account per region to avoid having one account change taking down your app.  
+  Doesn't work well with RDS multi region read replicas and other thing. You also have to be fully automated.  
+  The benefit is you prevent one change from taking out both regions.  
+
+links:
+  

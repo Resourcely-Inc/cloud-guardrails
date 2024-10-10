@@ -1,0 +1,17 @@
+authors: Mark Andersen
+name: Use SystemsManager if you need to SSH
+categories: Configuration
+functions: Standards
+resources: SystemsManager
+maturity: Low
+csps: AWS
+applies: For support
+summary: Use SystemsManager for SSH, as it is integrated into IAM for access.
+description: |
+  Use run commands (predefined commands) or the systems manager connectivity process to log into boxes. 
+  It is integrated into the IAM system for access already and is built in.
+
+
+links:
+- https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager.html
+  

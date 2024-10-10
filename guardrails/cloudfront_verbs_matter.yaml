@@ -1,0 +1,15 @@
+authors: Houston Hopkins
+name: Cloudfront verbs matter
+categories: Configuration, Change Management
+functions: Security
+resources: Cloudfront / S3
+maturity:
+csps: AWS
+applies: Possibly mitigated by Cloudfront domain validation
+summary: Avoid Cloudfront AllowedMethods beyond GET HEAD and OPTIONS.
+description: |
+  An attacker may make calls to Cloudfront and modify, add, delete content if careful usage of Verbs and S3 permissions are not set.
+  Any usage of  "AllowedMethods" beyond GET HEAD and OPTIONS present increased risk of loss, dependent on the toxic combination of the S3 Bucket policy permitting action:
+    - "*" or anything more than GetObject.
+links:
+  - https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_AllowedMethods.html

@@ -1,0 +1,20 @@
+authors: Nick Siow
+name: Delegated Accounts/Admins
+categories: Architecture, configuration
+functions: Security
+resources: CloudTrail, GuardDuty, SecurityHub, Config
+maturity: Medium
+csps: AWS
+applies: |
+  Teams & companies that do not use AWS Organizations
+summary: |
+  - Where possible, use of delegated admin accounts for sensitive services should be preferred
+  - Removing these use cases from the Org Root, etc helps to minimize the people and tooling with access to that account
+description: |
+  When managing security & governance services for large multi-account setups, AWS Organizations offers the ability to consolidate CloudTrail, Config, GuardDuty,etc into a consolidated account (by default, the Organization Root/Management account).
+
+  While this feature can greatly simplify operations, it can also push more workflows through the organization management account and put additional stress on the access requirements for that account. To avoid this situation, it's best to take advantage of the "delegated admin account" for all services which offer it.
+
+  This practice gives the ability to still consolidate features + functionality, but with an account that does not have the same unique privileges as your organization root. Separating each of these services into their own account is not always necessary, and instead the ideal setup is likely be somewhere in the middle -- delegating administration into one or more accounts where user access to that account aligns with the business need for managing these services.
+links:
+  - https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services_list.html

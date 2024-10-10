@@ -1,0 +1,19 @@
+authors: Mark Andersen
+name: Explicity chose what AWS services to allow
+categories: Architecture
+functions: Standards
+resources: AWS Services / AWS IAM
+maturity: Medium
+csps: AWS
+applies: Account setup
+summary: Limit via an allowlist what AWS services you want your teams to use in that account.
+description: |
+  Specifically allow (enable list) what AWS services you want your teams to use in that account.  
+  Otherwise teams will use everything and your cyber / arch / support risk footprints are huge and even more difficult to manage.  
+  Also, if you don't do this, when AWS releases a new service, everyone gets it whether you want folks using it then or not.  
+  Even if the service isn't targeted at your company type for the implementation. 
+
+
+links:
+- https://aws.amazon.com/iam/features/manage-permissions/?nc=sn&loc=2&dn=3
+  

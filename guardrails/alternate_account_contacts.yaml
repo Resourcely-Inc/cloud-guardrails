@@ -1,0 +1,19 @@
+authors: Nick Siow
+name: Alternate account contacts
+categories: Configuration
+functions: Standards
+resources: All
+maturity: Low
+csps: AWS
+applies: Always
+summary: AWS allows for contact info for billing/operations/security to be separated from the root user. This should be used to limit the employees with access to the root user email.
+description: |
+  In a large organization, the contact information associated with AWS accounts often gets overlooked as a minor administrative detail. However, access to the email associated with the root account provides access to password reset flows and (occasionally) security-critical communications.
+
+  Keeping this singular group too large can expose account owners to unexpected compromise scenarios, while keeping the group too small makes the account owners responsible for acknowledgment and routing of AWS operational emails.
+
+  The separation between root account emails and alternate account contacts should be used to ensure that:
+    - The group for root account access is kept to a minimally-small size
+    - The groups for operational emails, etc are expanded to include the correct stakeholders and responsible parties
+links:
+  - https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-update-contact.html

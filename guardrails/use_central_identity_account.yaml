@@ -1,0 +1,13 @@
+authors: Travis McPeak
+name: Use a central identity account
+categories: Architecture
+functions: Standards
+resources: IAM
+maturity: Medium
+csps: AWS
+applies: Companies that have a multi-account strategy should generally adopt this pattern
+summary: Centralize identities into a single account.
+description: |
+  Centralize identities into a single account that can assume appropriate roles in other accounts.
+links:
+  - https://aws.amazon.com/iam/identity-center/

@@ -1,0 +1,35 @@
+authors: Adam Cotenoff
+name: prefer CDN fronted private buckets for serving static assets
+categories: Architecture
+functions: Security, Reliability
+resources: S3
+maturity: Low
+csps: AWS
+applies: This only applies when you want to use an S3 bucket to serve static content.
+summary: To securely serve static assets over the internet, use a private bucket with a Content Delivery Network (CDN) front-end, instead of making the bucket itself public. This provides several advantages over using a public bucket to serve static assets.
+description: |
+  To securely serve static assets over the internet, use a private bucket with a Content Delivery Network (CDN) front-end, 
+  instead of making the bucket itself public. This provides several advantages over using a public bucket to serve static assets.
+  
+  Increased security and control: Public buckets are accessible to anyone on the internet, which can lead to unintentional or malicious access. 
+  CDN's give you more control over who can access assets, as opposed to the blanket act of making an entire bucket public. 
+  Using signed URLs, you can specify the amount of time that a URL is valid, configure custom headers, or set up signed cookies to control access to your content.
+  You can also specify certain properties and conditions to be true in which a user can access your content. 
+  Things like restricting by a specific geographic location or IP address can provide an extra layer of security against unauthorized access to your content. 
+  Ultimately, there are more granular security settings using a CDN as opposed to a public bucket. 
+  
+  
+  Better Performance: Using a CDN can help improve performance by delivering content from edge locations that are closer to your end-users, 
+  reducing latency and improving load times. 
+  
+  Lower Costs: 
+    - With a private bucket and a CDN front-end, you can often reduce your costs by only paying for the data transfer and storage that you actually use. 
+    - Offloading bandwidth usage to the CDN instead of serving the assets directly from the private bucket. 
+  
+  
+
+
+links:
+- https://docs.fastly.com/en/guides/amazon-s3
+- https://developers.cloudflare.com/support/third-party-software/others/configuring-an-amazon-web-services-static-site-to-use-cloudflare/
+  

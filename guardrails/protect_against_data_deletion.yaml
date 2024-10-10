@@ -1,0 +1,15 @@
+authors:  Mark Andersen
+name: Protect against data deletion
+categories: Configuration
+functions: Reliability, Security
+resources: S3, DynamoDB, RDS
+maturity: Medium
+csps: AWS
+applies: Always
+summary: Block delete calls on persistent data resources by default on IAM roles to avoid accidentally deleting all your data.  
+description: |
+  Block delete calls on persistent data resources by default on IAM roles to avoid accidentally deleting all your data.  
+  Automation can hurt sometimes. Having EBS, RDS, S3, etc.. 
+  Using AWS Backup is good, but sometimes the time of the backup doesn't match when you want.   
+
+links:

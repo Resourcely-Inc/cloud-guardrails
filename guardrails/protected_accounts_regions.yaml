@@ -1,0 +1,16 @@
+authors: Travis McPeak
+name: Protected accounts/regions
+categories: Change Management
+functions: Security, Reliability, Compliance
+resources: Many
+maturity: Medium
+csps: AWS, GCP, Azure
+applies: Companies should have a multi-account and/or multi-region strategy before adopting this
+summary: Require approval of changes for accounts or regions with sensitive infrastructure.
+description: |
+  Some accounts may contain sensitive infrastructure and changes within them should require approval from an informed stakeholder.
+  Informed stakeholders might include:
+   - Security
+   - SRE
+   - Service owner (for service-specific accounts)
+links:

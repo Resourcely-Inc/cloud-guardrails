@@ -1,0 +1,58 @@
+authors: Adam Cotenoff
+name: Cloud Tagging Standards
+categories: Configuration
+functions: Standards
+resources: All
+maturity: Medium
+csps: AWS
+applies: Always
+summary: Adopting a well-defined and documented tagging strategy to assist with resource tracking, cost management, security, compliance, and incident management.
+description: |
+  A cloud tagging standard is the cornerstone of a well governed cloud environment. 
+  A well-defined tagging strategy should define how tags are used to organize and manage AWS resources, 
+    - including which tags are used, 
+    - how they are applied, 
+    - and who is responsible for managing them. 
+  This strategy can assist with: 
+    - resource tracking, 
+    - cloud cost management, 
+    - security, 
+    - compliance, 
+    - and incident management. 
+  
+  Resource level tagging, as opposed to account level tagging, allows for more granular visibility into cloud infrastructure. 
+  To effectively manage AWS resources, it is essential to tag them with key information. 
+  A non-comprehensive list of key information can include:
+    - The responsible owner
+  
+  Attesting and attributing resources to a single owning team is an important practice for managing AWS resources. 
+  The responsible owner should be a team distribution list, rather than an individual, to ensure that ownership of the resource is not lost when an individual leaves the organization. 
+  Assigning ownership to a single team also ensures that there is a clear point of contact for any operational or security issues related to the resource.
+    - Pagerduty (or equivalent) service ID
+  
+  This tag can help to quickly identify the appropriate owner to page in the event of an incident related to the resource.
+    - Associated application(s)
+  
+  This tag can help to provide context around the resource, making it easier to manage and understand how it fits into the larger environment.
+    - Short description of the purpose of the resource
+  
+  This tag should provide a brief description of the resource's purpose, making it easier to understand and manage.
+    - Sensitivity level of data being handled/stored
+  
+  As a typical data-intensive application can share/spill data across many types of resources, tagging anything that is used to store or transit sensitive data types is critical. 
+  This tag can be used to track sensitive data and to ensure that appropriate security controls are in place to protect sensitive information. 
+    - Where (and possibly when) the resource configuration is managed/changed (if Infrastructure-as-Code (IaC) is used)
+  
+  This tag can help identify where a resource is being managed. 
+  Tying this to the IaC repo/build can provide for extremely granular attestation of changes. 
+    - “This resource was changed in X commit  by Y person at Z time.”
+  
+  By implementing a standard tagging strategy that includes these key pieces of information, you can better manage and optimize your AWS resources. 
+  Note that this is just a starting point, but this approach can lead to greater efficiency, cost savings, and improved security.
+    
+
+
+links:
+- https://yor.io/ - Automated IaC tag and trace
+- https://engineering.deptagency.com/best-practices-for-terraform-aws-tags
+  

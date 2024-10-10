@@ -1,0 +1,13 @@
+authors: Will Bengtson
+name: S3 bucket with versioning
+categories: Configuration
+functions: Reliability, Security
+resources: S3
+maturity: Low
+csps: AWS
+applies: All important data
+summary: Enforce a bucket pattern with versioning to prevent malicious tampering and facilitate recovery
+description: |
+  Bucket versioning is a best practice for protecting against malicious tampering of data.
+  While the new version will be the version read, you can attest / detect if data has been tampered by inspecting the number of versions of a file.
+links:

@@ -1,0 +1,20 @@
+authors: Adam Cotenoff
+name: Use SSO for user access
+categories: Architecture
+functions: Security
+resources: IAM
+maturity: Medium
+csps: AWS
+applies: Always
+summary: Use single-sign on for user access to simplify the login process and reduce the number of credentials that need to be managed.
+description: |
+  Single Sign-On (SSO) for User Access: 
+   - Implementing Single Sign-On (SSO) for user access simplifies the login process and reduces the number of credentials that need to be managed. 
+   - This allows you to connect and use your workforce identities for accessing cloud services. 
+   - There are several ways to implement SSO for user access in AWS, including using AWS IAM Identity Center, integrating with third-party identity providers (ie. Okta), or using custom solutions.
+   - This recommendation is SSO-provider agnostic so choose the right SSO provider that fits your organizations requirements.
+
+
+links:
+
+  

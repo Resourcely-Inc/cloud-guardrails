@@ -1,0 +1,13 @@
+authors: Houston Hopkins
+name: Cloudfront OAI usage
+categories: Configuration
+functions: Security
+resources: Cloudfront / S3
+maturity: Low
+csps: AWS
+applies: Anyone using Cloudfront with S3 as an origin.
+summary: Utilize Cloudfront OAI with origin type of s3/ Allow ONLY action s3:GetObject to the specific OAI in the bucket policy.
+description: |
+  Utilize Cloudfront OAI with origin type of s3/ Allow ONLY action s3:GetObject to the specific OAI in the bucket policy.
+links:
+  - https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html

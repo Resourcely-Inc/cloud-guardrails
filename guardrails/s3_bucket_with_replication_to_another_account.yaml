@@ -1,0 +1,16 @@
+authors: Will Bengtson
+name: S3 bucket with replication to another account
+categories: Configuration
+functions: Reliability, security
+resources: S3
+maturity: Medium
+csps: AWS
+applies: When effective DR is required
+summary: Require replication to another account for disaster recovery
+description: |
+  This is a best practice for disaster recovery.
+  The most brilliant teams with IAM only do well to the account level granularity.
+  A compromised AWS account that would allow a threat actor to delete data would also allow them to delete the backup data.
+
+  Require replication to another account for DR.
+links:
