@@ -6,7 +6,8 @@ resources: AWS Account
 maturity: Low
 csps: AWS
 applies: When designing your account structure and connectivity for all your cloud applications.
-sumamry: Have at least DEV, QA, PROD accounts.
+summary: Have at least DEV, QA, PROD accounts.
+how_to:
 
 description: |
   Have at least DEV, QA, PROD accounts. Recommend not having just non-prod and prod, otherwise you will be forced to parameterized your resources / 
