@@ -9,6 +9,7 @@ applies: All compute images
 summary: |
   - Supporting and standardizing base images becomes exceedingly more difficult as the number grows
   - Be opinionated about the set of base images and hold a high bar for introducing new distros and variations
+how_to:
 description: |
   Balancing freedom vs security is important when it comes to a curated and maintainable set of base images. It is likely that a single base image or OS distro will not fulfill the needs of an entire company, but care should be taken in the extent to which this set grows.
 

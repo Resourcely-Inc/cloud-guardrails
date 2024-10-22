@@ -7,6 +7,7 @@ maturity: Medium
 csps: AWS
 applies: Applies when a robust IaC CI/CD workflow is in place
 summary: Limiting engineers' access to production environments by managing infrastructure through Infrastructure as Code (IaC), enforcing identity-based changes, multi-party approval, MFA, and security linting helps ensure accountability, consistency, and reduces security risks.
+how_to:
 description: >
   There should be very few cases where engineers have unrestricted access to the production control plane for their infrastructure. 
   There are many operational benefits to using Infrastructure as Code (IaC), including, but not limited to, repeatability, 

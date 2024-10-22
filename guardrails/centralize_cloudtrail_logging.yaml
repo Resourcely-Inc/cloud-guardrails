@@ -7,6 +7,7 @@ maturity: Medium
 csps: AWS
 applies: Always
 summary: Configure CloudTrail to log to a bucket in a central account with specific prefixes based on the application or role sending them.
+how_to:
 description: |
   Configure CloudTrail to log to a bucket in a central account with specific prefixes based on the application or role sending them.
 links:

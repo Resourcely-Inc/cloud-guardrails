@@ -7,7 +7,7 @@ maturity: Medium
 csps: AWS
 applies: To all important data in DynamoDB
 summary: Require DynamoDB to have a backup enabled for DR.
-
+how_to:
 description: |
   Data stored in DynamoDB can vary from easy to recreate to impossible. Adding automatic backups ensures you can recover should the table be deleted accidentally or data is deleted and you aren't sure what it was.
   This should be a thing by default similar to RDS backups.

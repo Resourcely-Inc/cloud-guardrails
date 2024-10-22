@@ -7,6 +7,7 @@ maturity: Low
 csps: AWS
 applies: All copmanies using AWS organizations
 summary: Restrict the regions that you run in to only those you operate in, to avoid unnecessary attack surface/cost/complexity.
+how_to:
 description: |
   You cannot fully avoid us-East-1.
   However, all companies utilizing AWS organizations should consider a SCP to deny all regions except those explicitly used/necessary to avoid attack surface sprawl.

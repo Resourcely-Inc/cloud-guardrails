@@ -7,7 +7,7 @@ maturity: Medium
 csps: AWS
 applies: Always
 summary: Protect AWS credentials from SSRD vectors by enforcing AWS IMDSv2
-  
+how_to:
 description: |
   This is a best practice and will save you a ton in response and remediation for SSRD vulnerabilities.
   The main value is protecting AWS credentials from SSRF vectors which you are bound to be exposed to at some point.

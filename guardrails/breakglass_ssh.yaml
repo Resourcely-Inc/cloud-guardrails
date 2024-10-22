@@ -7,6 +7,7 @@ maturity: High
 csps: AWS
 applies:
 summary: For incident response and archaeology, all instances should have some sort of breakglass mechanism for direct access. A protected role with SSM access and/or tagging requirements on the instance can facilitate this.
+how_to:
 description: |
   During the course of an incident or security investigation, it's not uncommon for the security team to need direct SSH access to EC2 instances. This can be difficult in scenarios where the service/application owners exclusively control SSH, or in instances where an EC2 instance was abandoned and the owners are no longer accurate/with the company.
 

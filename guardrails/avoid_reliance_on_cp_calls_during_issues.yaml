@@ -7,7 +7,7 @@ maturity: High
 csps: AWS
 applies: Application Availability
 summary: Control planes prioritize consistency over availability when issues occur. Setup Route53 so failover is already setup using heath checks.
-
+how_to:
 description: |
   Control planes prioritize consistency over availability when issues occur.  
   Also, if there is a partial service outage, think of how AWS customers are going to try to fix their apps through automation or humans.  

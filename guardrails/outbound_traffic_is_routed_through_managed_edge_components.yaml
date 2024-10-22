@@ -10,6 +10,7 @@ applies: |
   If a user can create a new public VPC, they could theoretically bypass this egress proxy.
 
 summary: To prevent malicious or accidental exfiltration of data, all outbound traffic should be routed through managed edge components. 
+how_to:
 description: |
   Outbound traffic to the public internet should be routed through an egress proxy with an explicit allowlist of public addresses. 
   This provides improved visibility into the traffic leaving the network. 

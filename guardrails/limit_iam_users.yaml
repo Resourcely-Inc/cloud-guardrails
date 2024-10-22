@@ -7,6 +7,7 @@ maturity: Medium
 csps: AWS
 applies: Always
 summary: Limit the creation of new IAM users, and prefer using IAM roles when possible.
+how_to:
 description: | 
   IAM users have long-term credentials, such as a password or access keys, that can be used to access AWS resources. 
   Creating IAM Users directly can lead to a proliferation of long lived credentials, making it difficult to manage and audit access to resources. 

@@ -9,6 +9,7 @@ applies:
 summary: |
   - External/third party accounts should be inventoried in a central location, along with relationship/justification
   - Expanding perimeter via policy should require expanding account inventory first
+how_to:
 description: |
   While sharing AWS resources with external entities is a common industry practice, these integration points constitute areas of high potential risk and can blur the lines between partner integrations and cloud compromise scenarios.
 

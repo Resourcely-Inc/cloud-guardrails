@@ -7,6 +7,7 @@ maturity: Medium
 csps: AWS
 applies: When using ELB / ALB / NLB
 summary: Enable access logs for all load balancers.
+how_to:
 description: >
   Turn on the access logs to your load balancers. 
   You'll want to suck them into a search tool AND, 

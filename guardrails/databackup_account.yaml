@@ -6,6 +6,7 @@ resources: S3
 maturity: Medium
 csps: AWS
 applies: Applies if you have data that has to persist for business operation, regulatory or legal reasons.
+how_to:
 summary: Create a Cold account for copying in data that can't be deleted.
 description: |
   You need a way to have backups in an account different from yours in case someone takes over your account (ex. the codespaces event).

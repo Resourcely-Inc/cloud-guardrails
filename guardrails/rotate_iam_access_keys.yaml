@@ -7,6 +7,7 @@ maturity:
 csps: AWS
 applies: To IAM users
 summary: Rotate IAM access keys where IAM users are still required
+how_to:
 description: >
   In the situations where IAM users are still required, or for existing IAM users 
   that haven not/can not be migrated to IAM roles, access keys should be rotated where applicable. 

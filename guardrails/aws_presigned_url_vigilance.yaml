@@ -7,6 +7,7 @@ maturity: Medium
 csps: AWS
 applies: Unless there are active measures taken in AWS SCP, Resource policies, or IAM policies
 summary: Prevent presigned URLs for all of your resources, not just S3
+how_to:
 description: |
   Commonly when we talk about PresignedURLs we all immediately think of Amazon S3 as it is well documented and widely used with presigned URLs.
   In fact most, if not all AWS API calls can be presigned. Create/Delete calls for EC2, VPC, RDS, Lambda.

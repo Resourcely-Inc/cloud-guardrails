@@ -7,6 +7,7 @@ maturity: Medium
 csps: AWS
 applies: When effective DR is required
 summary: Require replication to another account for disaster recovery
+how_to:
 description: |
   This is a best practice for disaster recovery.
   The most brilliant teams with IAM only do well to the account level granularity.

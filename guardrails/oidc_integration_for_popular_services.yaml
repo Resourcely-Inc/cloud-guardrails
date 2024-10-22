@@ -7,6 +7,7 @@ maturity: Medium
 csps: AWS
 applies: Always
 summary: Avoid using IAM users for popular services by creating a pattern to enable OIDC integrations.
+how_to:
 description: |
   Create pattern to enable OIDC integrations for popular services to promote not using IAM Users: GitHub Actions, Terraform Cloud, etc
 links:

@@ -7,6 +7,7 @@ maturity: Medium
 csps: AWS
 applies: Always
 summary: Avoid throttling issues from multiple AWS describe calls by fostering solutions that collect data once, share it across tools, and store it in a centralized system like AWS Config or a data warehouse for efficient reporting.
+how_to:
 description: |
   As your organization grows there will be an increasing number of tools and services that will want inventory of resources and policies and settings in each cloud account.
   When all of these resources start to cause your describe calls to various AWS service endpoint to get throttle you know "you have arrived".

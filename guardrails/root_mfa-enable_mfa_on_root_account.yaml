@@ -7,6 +7,7 @@ maturity: Low
 csps: AWS
 applies: All AWS accounts
 summary: Enable multi-factor authentication on the root account with alerting.
+how_to:
 description: |
   Root login needs to be MFA's and you must alert when someone logs in with it.  
   You can do this by monitoring / alerting through monitoring cloudtrail logs.

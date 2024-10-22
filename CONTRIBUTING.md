@@ -41,7 +41,9 @@ We use GitHub issues to track public bugs. Report a bug by [opening a new issue]
 - Maturity: what maturity level an organization should be before attempting to meet the guardrail
 - CSPs: AWS, Azure, GCP
 - Applies: text description of when the guardrail does/doesn't apply
-- Description: text for the user to understand the guardrail
+- Summary: short-form text summary of the guardrail
+- How_to: long-form text or code snippet for describing how to implement the guardrail
+- Description: long-form text for the user to understand the guardrail
 - Links: a list of applicable links
 
 ## Valid YAML

@@ -7,6 +7,7 @@ maturity: High
 csps: AWS
 applies: When designing your account structure and connectivity for all your cloud applications.
 summary: Aggressively use accounts as your permissions and blast radius boundary.
+how_to:
 
 description: |
   Account is the permissions boundary. Account is also a blast radius boundary. 

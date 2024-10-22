@@ -7,6 +7,7 @@ maturity: Medium
 csps: AWS
 applies: Account setup
 summary: Limit via an allowlist what AWS services you want your teams to use in that account.
+how_to:
 description: |
   Specifically allow (enable list) what AWS services you want your teams to use in that account.  
   Otherwise teams will use everything and your cyber / arch / support risk footprints are huge and even more difficult to manage.  

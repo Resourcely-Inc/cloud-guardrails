@@ -7,6 +7,7 @@ maturity: Medium
 csps: AWS
 applies: Always
 summary: Block delete calls on persistent data resources by default on IAM roles to avoid accidentally deleting all your data.  
+how_to:
 description: |
   Block delete calls on persistent data resources by default on IAM roles to avoid accidentally deleting all your data.  
   Automation can hurt sometimes. Having EBS, RDS, S3, etc.. 

@@ -7,6 +7,7 @@ maturity: Low
 csps: AWS
 applies: When using lambda
 summary: Lambdas suffer from the noisy neighbor problem if you don't set a reserve concurrency value
+how_to:
 description: |
   If you don't set a reserved concurrency number, you use the account pool of concurrency which is shared by all lambdas in the account. 
   If one bad / out of control lambda uses all of the account pool other lambdas in the shared concurrency pool can't run. 
