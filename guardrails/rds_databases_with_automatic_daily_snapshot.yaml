@@ -7,6 +7,7 @@ maturity: Low
 csps: AWS
 applies: Always
 summary: Configure automatic daily snapshots of RDS databases for backup purposes.
+how_to:
 description: |
   This is a best practice. There will definitely be times where a migration fails and you will want to roll back to a previous known good dataset. You will also be asked by customers and SOC2 on how you manage backups of your data.
   Require RDS to auto snapshot daily for backup purposes.

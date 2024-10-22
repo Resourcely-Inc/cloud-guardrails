@@ -8,6 +8,7 @@ csps: AWS
 applies: |
   Resources that are meant to be public, such as S3 buckets containing non-proprietary web assets or public datasets.
 summary: Any exposure of a resource to truly public (aka not restricted by Condition) users should require additional approval
+how_to:
 description: |
   The notion of "public" within AWS is not a straightforward issue to navigate. For example, infrastructure can be public from a network perspective (L4) and reachable from the public internet, but have compensating controls which make this a non-issue.
 

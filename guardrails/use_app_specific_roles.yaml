@@ -8,6 +8,7 @@ csps: AWS
 applies: |
   Setting this up requires some investment, the practice is probably more relevant for larger companies that have the basics addressed.
 summary: Use application-specific roles wherever possible, enabling least-privilege to your roles versus shared roles with a superset of permissions.
+how_to:
 description: |
   Use application-specific roles wherever possible. This makes it possible to apply least privilege to the roles versus a shared role that needs the superset of all permissions.
   To make this work an organization needs automation that creates application roles automatically.

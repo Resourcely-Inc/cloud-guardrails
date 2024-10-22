@@ -7,6 +7,7 @@ maturity: Medium
 csps: AWS
 applies: Always
 summary: Adopting a well-defined and documented tagging strategy to assist with resource tracking, cost management, security, compliance, and incident management.
+how_to:
 description: |
   A cloud tagging standard is the cornerstone of a well governed cloud environment. 
   A well-defined tagging strategy should define how tags are used to organize and manage AWS resources, 

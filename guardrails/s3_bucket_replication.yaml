@@ -7,6 +7,7 @@ maturity: High
 csps: AWS
 applies: When recovery is necessary
 summary: Require S3 bucket replication to another account and region
+how_to:
 description: |
   Require replication to another account and region for enhanced DR
 links:

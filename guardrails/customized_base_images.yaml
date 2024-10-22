@@ -10,6 +10,7 @@ applies: |
 summary: |
     - When possible, all AMIs in your organization should be based off a blessed base image
     - This base image is an excellent target for proliferating secure defaults and best practices
+how_to:
 description: |
   Whether using golden images or configuring your compute at runtime, every EC2 image has a "lineage" of sorts, which represent the one or more images that were used during the image baking process to create this image.
 

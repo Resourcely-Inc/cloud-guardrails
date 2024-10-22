@@ -7,6 +7,7 @@ maturity: Low
 csps: AWS
 applies: Compliance driven
 summary: Enforce volume encryption at the account level by default.
+how_to:
 description: |
   Encrypt EBS Volumes by default
 

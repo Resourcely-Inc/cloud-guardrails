@@ -7,6 +7,7 @@ maturity: Low
 csps: AWS
 applies: This only applies when you want to use an S3 bucket to serve static content.
 summary: To securely serve static assets over the internet, use a private bucket with a Content Delivery Network (CDN) front-end, instead of making the bucket itself public. This provides several advantages over using a public bucket to serve static assets.
+how_to:
 description: |
   To securely serve static assets over the internet, use a private bucket with a Content Delivery Network (CDN) front-end, 
   instead of making the bucket itself public. This provides several advantages over using a public bucket to serve static assets.

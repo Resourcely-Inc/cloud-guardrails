@@ -7,6 +7,7 @@ maturity: Medium
 csps: AWS
 applies: Always
 summary: Base images can provide a wealth of security benefits, but are also point-in-time snapshots that become stale. Ensure that the base image used for any new image creation is sufficiently fresh.
+how_to:
 description: |
   The standardization benefits of using base images only apply if the software and customizations within those base images are up to date. As new base images are created, subsequent AMI bakes should switch over to those new images with minimal delay.
 

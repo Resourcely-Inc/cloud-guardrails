@@ -7,6 +7,7 @@ maturity: Medium
 csps: AWS
 applies: Always
 summary: The use of public IP address by services running in the cloud should be restricted.
+how_to:
 description: | 
   Traffic from the public internet to services running on the cloud should be centralized through ingress proxies. 
   

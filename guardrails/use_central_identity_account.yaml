@@ -7,6 +7,7 @@ maturity: Medium
 csps: AWS
 applies: Companies that have a multi-account strategy should generally adopt this pattern
 summary: Centralize identities into a single account.
+how_to:
 description: |
   Centralize identities into a single account that can assume appropriate roles in other accounts.
 links:

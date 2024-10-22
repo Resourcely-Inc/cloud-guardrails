@@ -7,6 +7,7 @@ maturity: High
 csps: AWS
 applies: For relaible EC2 in AWS
 summary: Require autoscaling groups for resilient deployments in case your EC2 instances fail.
+how_to:
 description: |
   This is a best practice for reliability of deployments in AWS.
   EC2 instances can sometimes just disappear and ASGs ensure you always have at least 1 server running and serving your customers.

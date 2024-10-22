@@ -10,6 +10,7 @@ applies: |
 summary: |
   - Where possible, use of delegated admin accounts for sensitive services should be preferred
   - Removing these use cases from the Org Root, etc helps to minimize the people and tooling with access to that account
+how_to:
 description: |
   When managing security & governance services for large multi-account setups, AWS Organizations offers the ability to consolidate CloudTrail, Config, GuardDuty,etc into a consolidated account (by default, the Organization Root/Management account).
 

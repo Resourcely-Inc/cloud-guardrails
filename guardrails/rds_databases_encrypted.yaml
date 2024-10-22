@@ -9,6 +9,7 @@ applies: |
   This is purely a compliance check the box.
   RDS isn't ever in a resting state so the data is always unencrypted while in use.
 summary: Encrypt RDS databases at rest.
+how_to:
 description: |
   Require encryption at rest on RDS.
 links:

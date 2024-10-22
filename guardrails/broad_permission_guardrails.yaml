@@ -9,6 +9,7 @@ applies: Some entities (such as AWS admins) are going to need this by default
 summary: |
   - Usage of "*:*" permissions, "AdministratorAccess", and various "FullAccess" policies confer permissions that are likely overscoped.
   - While it's difficult to enumerate all of these, the most likely ones are a finite and auditable number.
+how_to:
 description: |
   For many organizations, true least privilege within AWS is either unattainable or undesirable (within reason). However, there are many milestones between least privilege and unchecked AWS access.
 

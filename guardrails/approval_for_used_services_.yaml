@@ -7,7 +7,7 @@ maturity: Medium
 csps: AWS
 applies: Always
 summary: When handling sensitive data in the cloud, it is important to ensure that the cloud services being used meet certain security, compliance, and governance requirements.
-
+how_to:
 description: |
      This requires a thorough evaluation of both the cloud service provider and the specific services being used.
     As every company has their own risk appetite, it is up to the corresponding security/compliance/governance teams of each company to adequately assess

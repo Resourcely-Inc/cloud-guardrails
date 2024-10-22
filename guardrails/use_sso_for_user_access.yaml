@@ -7,6 +7,7 @@ maturity: Medium
 csps: AWS
 applies: Always
 summary: Use single-sign on for user access to simplify the login process and reduce the number of credentials that need to be managed.
+how_to:
 description: |
   Single Sign-On (SSO) for User Access: 
    - Implementing Single Sign-On (SSO) for user access simplifies the login process and reduces the number of credentials that need to be managed. 

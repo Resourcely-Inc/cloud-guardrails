@@ -8,7 +8,7 @@ csps: AWS
 applies: >
   This best practice applies particularly when using AWS Organizations to centrally manage multiple AWS accounts as a single entity. 
 summary: Set up baseline security services by default (logging, monitoring, IAM, etc.) and prevent them from being removed.
-
+how_to:
 description: >
   When using AWS Organizations, you can set up a hierarchy of accounts, with a master account at the top and multiple member accounts 
   underneath. With this setup, you can apply policies and controls across all member accounts, including setting up this baseline of 

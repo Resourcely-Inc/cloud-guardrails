@@ -7,6 +7,7 @@ maturity: Medium
 csps: AWS
 applies: Always
 summary: Restrict OIDC integrations so you don't have backdoor or rogue access.
+how_to:
 description: |
   You want to be able tell how you provide access to AWS. More and more companies are supporting OIDC auth into AWS, restrict access to this and onboard these use cases as you see fit and approve so that you know how employees and services are authorized into AWS.
   Restrict the abilty to register OIDC integrations so that you don't have backdoor / rogue access.

@@ -7,6 +7,7 @@ maturity: Medium
 csps: AWS
 applies: Always
 summary: Creating IAM roles that have the necessary permissions, and then assigning those roles to the IAM users who require access to the resources allows you to centralize the management of permissions. 
+how_to:
 description: >
   When you create an IAM user, permissions can be granted to the user directly by attaching policies that specify what the user can and cannot do. 
   It is recommended to avoid assigning permissions directly to IAM users. Instead, you should create IAM roles to delegate permissions to an IAM user. 

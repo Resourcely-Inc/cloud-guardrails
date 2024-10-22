@@ -7,7 +7,7 @@ maturity: Medium
 csps: AWS
 applies: When you point DNS records to cloud infrastructure
 summary: Tightly couple any processes that involve Route53 to their Alias resources to avoid subdomain takeover.
-
+how_to:
 description: |
   Dangling DNS records (orphaned DNS records) are common across many companies in the cloud age and modern IaC often do not take into account how a Route53 record could become orphaned when it's target infrastructure is deleted.
   The coupling is often missing and the value of order not considered. If you host DNS records even outside of route53 but point the alias or CNAME to AWS resources you should act with caution
