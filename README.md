@@ -14,6 +14,8 @@ But it can be hard to get a high-level view quickly, see best practices in a tab
 
 The Cloud Guardrails project aims to be an open-source reference of best practices to help spread knowledge and socialize what works.
 
+Check it out at [cloudguardrails.com](https://www.cloudguardrails.com)!
+
 ## Format
 Each guardrail is contained in a YAML file. We designed it this way so you can easily skim the best practices and see structured information about them. We have also built a tool to display them in a simple table format that allows sorting.
 
