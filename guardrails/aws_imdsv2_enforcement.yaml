@@ -15,3 +15,5 @@ description: |
   
   Enforce the use of the IMDSv2 to mitigate risk of credential exposure via SSRF
 links:
+  - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html#recommended-path-for-requiring-imdsv2
+  - https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps_examples_ec2.html#example-ec2-2
