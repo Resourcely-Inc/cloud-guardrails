@@ -1,0 +1,25 @@
+authors: Jay Dhulia
+name: Use External IDs to prevent Cross-Account Confused Deputy problems
+categories: Configuration
+functions: Security
+resources: IAM Roles
+maturity: Low
+csps: AWS
+applies: Always
+summary: Use External IDs when allowing role assumption from third-parties to secure third-party access to AWS resources and prevent Confused Deputy problems.
+how_to:
+description: | 
+  The External ID is a critical security mechanism used when delegating access to AWS resources to third parties through IAM roles, 
+  that can be used to mitigate the cross-account confused deputy problem. The cross-account confused deputy problem in AWS occurs when 
+  a third-party application mistakenly uses its permissions to access resources unintentionally on behalf of another party, 
+  in this case via a role assumption. This identifier acts as an additional layer of security, ensuring that the IAM role cannot 
+  be assumed without the specific External ID, which is known only to the owner account and the third party. It helps to prevent 
+  the third-party application from being used as a confused deputy, i.e., from being coerced into acting on behalf of a malicious actor.
+  
+  The external ID should be a unique identifier that cannot be easily guessed, such as an invoice number or UUID, 
+  rather than predictable information like a name or phone number. This ID must be provided by the third party when 
+  they attempt to assume the role, ensuring that only authorized entities can access the resources.
+
+links:
+- https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_third-party.html#id_roles_third-party_external-id
+- https://docs.aws.amazon.com/IAM/latest/UserGuide/confused-deputy.html#mitigate-confused-deputy
