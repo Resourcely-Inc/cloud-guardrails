@@ -7,7 +7,10 @@ maturity: Low
 csps: AWS
 applies: To IAM users
 summary: Delete IAM access keys that have not been used recently
-how_to:
+how_to: |
+  An access key's most recent usage can be identified in the console or CLI, or by generating an IAM credential report for the AWS account where it resides: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_finding-unused.html#finding-unused-access-keys
+
+  Automatic remediation can be achieved using custom automation, e.g. a Lambda function or Cloud Custodian.
 description: |
   In the situations where IAM users are still required, or for existing IAM users that haven not/can not be migrated to IAM roles, access keys should be deleted if they are not in use. 
   
