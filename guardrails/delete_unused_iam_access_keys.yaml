@@ -1,0 +1,24 @@
+authors: Isaac Lepow
+name: Delete Unused IAM Access Keys
+categories: Process
+functions: Security
+resources: IAM Users
+maturity: Low
+csps: AWS
+applies: To IAM users
+summary: Delete IAM access keys that have not been used recently
+how_to: |
+  An access key's most recent usage can be identified in the console or CLI, or by generating an IAM credential report for the AWS account where it resides.
+
+  Automatic remediation can be achieved using custom automation, e.g. a Lambda function or Cloud Custodian.
+description: |
+  In the situations where IAM users are still required, or for existing IAM users that haven not/can not be migrated to IAM roles, access keys should be deleted if they are not in use. 
+  
+  How frequently an access key must be used may vary based on your specific security requirements, but CIS recommends removing IAM credentials that have been unused for 45 days or more. 
+  
+  Removing unused access limits the impact of abandoned or forgotten credentials, and reduces the window of opportunity for attackers to use compromised credentials.
+
+links:
+  - https://docs.aws.amazon.com/securityhub/latest/userguide/iam-controls.html#iam-22
+  - https://docs.aws.amazon.com/config/latest/developerguide/iam-user-unused-credentials-check.html
+  - https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_finding-unused.html#finding-unused-access-keys
