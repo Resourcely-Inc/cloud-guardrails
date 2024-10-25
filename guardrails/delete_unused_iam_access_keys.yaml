@@ -8,7 +8,7 @@ csps: AWS
 applies: To IAM users
 summary: Delete IAM access keys that have not been used recently
 how_to: |
-  An access key's most recent usage can be identified in the console or CLI, or by generating an IAM credential report for the AWS account where it resides: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_finding-unused.html#finding-unused-access-keys
+  An access key's most recent usage can be identified in the console or CLI, or by generating an IAM credential report for the AWS account where it resides.
 
   Automatic remediation can be achieved using custom automation, e.g. a Lambda function or Cloud Custodian.
 description: |
@@ -20,3 +20,5 @@ description: |
 
 links:
   - https://docs.aws.amazon.com/securityhub/latest/userguide/iam-controls.html#iam-22
+  - https://docs.aws.amazon.com/config/latest/developerguide/iam-user-unused-credentials-check.html
+  - https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_finding-unused.html#finding-unused-access-keys
